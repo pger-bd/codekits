@@ -1,0 +1,12 @@
+server: 
+  port: ${APP_PORT:8800}
+  
+spring:
+  application:
+    name: service-officemanage
+  profiles:
+    active: ${PROFILE:test}
+    
+user: 
+  uname: root
+  pwd: root&pwd

@@ -1,0 +1,26 @@
+# redis-sentinel
+spring: 
+ redis: 
+  host: localhost
+  port: 6379
+  password: 123456
+  timeout: 20000
+  database: 1
+  pool:
+       max-active: 8
+       min-idle: 0
+       max-idle: 8
+       max-wait: -1
+
+            
+# 打印日志
+#系统默认在workspace下生成如果file:不带路径
+logging: 
+  file: zhx_${spring.application.name}.log
+  level:
+    root: INFO
+    org.hibernate: INFO
+    org.hibernate.type.descriptor.sql.BasicBinder: TRACE
+    org.hibernate.type.descriptor.sql.BasicExtractor: TRACE
+    com.springms: DEBUG
+    org.codekits: DEBUG
